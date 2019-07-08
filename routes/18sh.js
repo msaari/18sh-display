@@ -23,7 +23,7 @@ module.exports = ({ router }) => {
 		const conf = new Configstore(body.name)
 		conf.set("data", body.data)
 
-		ctx.status = 201
+		ctx.status = 200
 		ctx.body = "Ok!"
 	})
 }

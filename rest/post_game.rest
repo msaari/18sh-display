@@ -2,12 +2,6 @@ POST http://localhost:3018/18sh/
 Content-Type: application/json
 
 {
-	"name": "rusty-incident",
-	"data": {
-		"MIKKO": "300",
-		"NOOA": "245",
-		"GT": "124",
-		"NBR": "1245",
-		"bank": "124"
-	}
+  "name": "eneloop",
+  "data": { "bank": 3400, "MIKKO": -440, "NOOA": 1040, "GT": 0 }
 }

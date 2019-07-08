@@ -2,6 +2,8 @@ const Koa = require("koa")
 const bodyParser = require("koa-bodyparser")
 const Router = require("koa-router")
 
+const port = process.env.PORT || 3000
+
 const app = new Koa()
 app.use(bodyParser())
 
@@ -32,6 +34,6 @@ require("./routes/18sh")({ router })
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-if (!module.parent) app.listen(3018)
+if (!module.parent) app.listen(port)
 
 module.exports = app

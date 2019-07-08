@@ -1,55 +1,36 @@
 "use strict"
 
 module.exports = (title, data) => {
-	const css = `
-<style type="text/css">
-#grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.item {
-	padding: 40px;
-	flex: 1;
-}
-
-.name {
-	font-size: 80px;
-	text-align: center;
-}
-
-.cash {
-	font-size: 100px;
-	text-align: center;
-}
-
-.cash::before {
-	content: "$";
-}
-
-#topbar {
-	background-color: rgb(30, 62, 46);
-	color: #fff;
-	padding: 10px 20px;
-}
-
-#topbar h1 {
-	display: inline;
-	margin-right: 2em;
-}
-</style>
-	`.trim()
+	const css = require("../css/style")
 
 	const cashHoldings = Object.keys(data).map(key => {
 		const cash = data[key]
-		return `<div class="item"><div class="name">${key}</div><div class="cash">${cash}</div></div>`
+		const className = key.replace(/[^\w\d]/, "_")
+		return `<div class="item"><div class="name ${className}">${key}</div><div class="cash">${cash}</div></div>`
 	})
 	const cashHTML = cashHoldings.join("")
 
+	const today = new Date()
+	const time =
+		today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+
 	const topBarContent = `
-	Pro tip: Zoom in in the browser until the boxes fill up screen nicely.
+	Pro tip: Zoom in in the browser until the boxes fill up screen nicely. Last refresh: ${time}
 	`.trim()
 
-	return `<html><head><title>18SH: ${title}</title>${css}</head><body><div id="topbar"><h1>${title}</h1> <span>${topBarContent}</span></div><div id="grid">${cashHTML}</div></body></html>`
+	return `
+	<html>
+		<head>
+			<title>18SH: ${title}</title>
+			<style type="text/css">${css()}</style>
+			<meta http-equiv="refresh" content="30" />
+		</head>
+		<body>
+			<div id="topbar">
+				<h1>${title}</h1> <span>${topBarContent}</span>
+			</div>
+			<div id="grid">${cashHTML}</div>
+		</body>
+	</html>
+	`.trim()
 }
