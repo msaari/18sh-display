@@ -1,0 +1,13 @@
+POST http://localhost:3018/18sh/
+Content-Type: application/json
+
+{
+	"name": "rusty-incident",
+	"data": {
+		"MIKKO": "300",
+		"NOOA": "245",
+		"GT": "124",
+		"NBR": "1245",
+		"bank": "124"
+	}
+}

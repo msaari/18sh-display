@@ -1,0 +1,28 @@
+{
+  "name": "18sh-display",
+  "version": "0.1.0",
+  "description": "Cash holdings display module for 18SH",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "NODE_ENV=development nodemon app.js"
+  },
+  "keywords": [
+    "18xx",
+    "18sh",
+    "games",
+    "boardgames"
+  ],
+  "author": "Mikko Saari",
+  "license": "MIT",
+  "dependencies": {
+    "configstore": "^5.0.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
