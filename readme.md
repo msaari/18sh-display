@@ -37,6 +37,10 @@ The display can show colors for companies. The colors are set from [a CSS file](
 
 These classes can be used to set up colors for companies. The CSS file has some familiar companies already set up (18xx staples like PRR, B&O, C&O, NYC and Erie), and you can add more to suit your needs (if you do add more companies, please do a pull request so I can add them in).
 
+## Example
+
+![Example image](sample-game.jpg)
+
 ## License
 
 Copyright 2019 [Mikko Saari](https://github.com/msaari/) mikko@mikkosaari.fi
