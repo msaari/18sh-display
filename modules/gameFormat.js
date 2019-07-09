@@ -3,8 +3,10 @@
 module.exports = (title, data) => {
 	const css = require("../css/style")
 
-	const cashHoldings = Object.keys(data).map(key => {
-		const cash = data[key]
+	const round = data.round
+
+	const cashHoldings = Object.keys(data.cash).map(key => {
+		const cash = data.cash[key]
 		const className = key.replace(/[^\w\d]/, "_")
 		return `<div class="item"><div class="name ${className}">${key}</div><div class="cash">${cash}</div></div>`
 	})
@@ -27,7 +29,7 @@ module.exports = (title, data) => {
 		</head>
 		<body>
 			<div id="topbar">
-				<h1>${title}</h1> <span>${topBarContent}</span>
+				<h1>${title}</h1> <span class="round">${round}</span> <span>${topBarContent}</span>
 			</div>
 			<div id="grid">${cashHTML}</div>
 		</body>

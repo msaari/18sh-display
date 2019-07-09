@@ -43,6 +43,11 @@ body {
 	margin-right: 2em;
 }
 
+#topbar .round {
+	font-size: 32px;
+	margin-right: 2em;
+}
+
 .GT {
 	color: black;
 	background-color: orange;
