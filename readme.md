@@ -29,7 +29,7 @@ When you have the environmental variable set up and the server running, there's 
 
 	https://peaceful-sands-90210.herokuapp.com/18sh/<gamename>
 
-where `<gamename>` is the name of your game in 18SH. This should bring up the cash display. The display will refresh automatically every 30 seconds.
+where `<gamename>` is the name of your game in 18SH. This should bring up the cash display. The display will refresh automatically every 5 seconds.
 
 ## Company colors
 

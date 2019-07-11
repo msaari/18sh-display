@@ -25,7 +25,7 @@ module.exports = (title, data) => {
 		<head>
 			<title>18SH: ${title}</title>
 			<style type="text/css">${css()}</style>
-			<meta http-equiv="refresh" content="30" />
+			<meta http-equiv="refresh" content="5" />
 		</head>
 		<body>
 			<div id="topbar">
