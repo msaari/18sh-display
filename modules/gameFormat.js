@@ -1,9 +1,12 @@
 "use strict"
 
 module.exports = (title, data) => {
-	const css = require("../css/style")
+	let css = require("../css/style")()
 
 	const round = data.round
+	const currencySymbol = data.currency
+
+	if (currencySymbol !== "$") css = css.replace(/\$/, currencySymbol)
 
 	const cashHoldings = Object.keys(data.cash).map(key => {
 		const cash = data.cash[key]
@@ -24,7 +27,7 @@ module.exports = (title, data) => {
 	<html>
 		<head>
 			<title>18SH: ${title}</title>
-			<style type="text/css">${css()}</style>
+			<style type="text/css">${css}</style>
 			<meta http-equiv="refresh" content="5" />
 		</head>
 		<body>
