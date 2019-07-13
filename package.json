@@ -1,6 +1,6 @@
 {
   "name": "18sh-display",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "Cash holdings display module for 18SH",
   "main": "index.js",
   "scripts": {
@@ -14,13 +14,17 @@
     "games",
     "boardgames"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msaari/18sh-display.git"
+  },
   "engines": {
     "node": "12.x"
   },
   "author": "Mikko Saari",
   "license": "MIT",
   "dependencies": {
-    "configstore": "^5.0.0",
+    "conf": "^5.0.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0"
