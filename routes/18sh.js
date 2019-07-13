@@ -1,10 +1,17 @@
-const Configstore = require("configstore")
+const Conf = require("conf")
 const gameFormat = require("../modules/gameFormat")
+const showAll = require("../modules/showAll")
 
 module.exports = ({ router }) => {
+	router.get("/", async (ctx, next) => {
+		const conf = new Conf("18sh-display")
+		const allGames = conf.store
+		ctx.body = showAll(allGames)
+	})
+
 	router.get("/:id", async (ctx, next) => {
-		const conf = new Configstore(ctx.params.id)
-		const game = conf.get("data")
+		const conf = new Conf("18sh-display")
+		const game = conf.get(ctx.params.id)
 		if (game !== undefined) {
 			ctx.body = gameFormat(ctx.params.id, game)
 		} else {
@@ -20,8 +27,8 @@ module.exports = ({ router }) => {
 
 		if (!body.name) ctx.throw(400, "Game name not specified.")
 
-		const conf = new Configstore(body.name)
-		conf.set("data", body.data)
+		const conf = new Conf("18sh-display")
+		conf.set(body.name, body.data)
 
 		ctx.status = 200
 		ctx.body = "Ok!"
