@@ -17,11 +17,19 @@ Easiest solution to get a server live is to use a service like [Heroku](https://
 	heroku create
 	git push heroku
 
-This should get you a running server, with a name like `https://peaceful-sands-90210.herokuapp.com/`. To use this with 18SH, you need to set up an environmental variable that points to the running server. The exact method depends on your system ([see this helpful guide](https://www.schrodinger.com/kb/1842)). On my Mac running zsh, I do it like this:
+This should get you a running server, with a name like `https://peaceful-sands-90210.herokuapp.com/`. You can navigate to `/18sh` on the server to make sure it works; that should get you a menu page with a list of games currently running at the server. To use this with 18SH, you need to set up an environmental variable that points to the running server. The exact method depends on your system ([see this helpful guide](https://www.schrodinger.com/kb/1842)). On my Mac running zsh, I do it like this:
 
 	export DISPLAY18SH=https://peaceful-sands-90210.herokuapp.com/18sh/
 
 In any case, the name of the environmental variable is `DISPLAY18SH` and you need to add `18sh/` to the end of the URL from Heroku (or wherever it is you host the server). This variable needs to be set on the system you use to run 18SH, not on the system that runs the Cash Display.
+
+## A server for loan
+
+If you don't want to go through the effort of running your own server, I have a server that can be used. Drop me an email at mikko@mikkosaari.fi if you want to use it.
+
+## Compatibility with 18SH
+
+If you use the latest version of both 18SH and the Cash Display, you'll be fine. If you want to use released versions, make sure both 18SH and the Cash Display have the same major version number (major version is the first number in the version number), and there should be no compatibility issues.
 
 ## Use during play
 
@@ -40,6 +48,11 @@ These classes can be used to set up colors for companies. The CSS file has some 
 ## Example
 
 ![Example image](sample-game.jpg)
+
+## Changelog
+
+See [changelog.md](changelog.md) in the repo for change history, todo list and
+the unreleased features already available from the repo, but not in releases.
 
 ## License
 
