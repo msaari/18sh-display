@@ -49,6 +49,14 @@ These classes can be used to set up colors for companies. The CSS file has some 
 
 ![Example image](sample-game.jpg)
 
+## Dependencies
+
+18SH Cash Display is built from a fairly small set of bricks.
+
+- The server uses [Koa](https://koajs.com/), which is a small, expressive and robust web framework for node.js.
+- It is augmented with [koa-bodyparser](https://github.com/koajs/bodyparser) and [koa-router](https://github.com/ZijianHe/koa-router).
+- Data storage is done with [conf](https://github.com/sindresorhus/conf).
+
 ## Changelog
 
 See [changelog.md](changelog.md) in the repo for change history, todo list and
