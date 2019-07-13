@@ -4,6 +4,12 @@ body {
 	font-family: sans-serif;
 }
 
+#main p, #main ul {
+	margin-left: 2em;
+	width: 50%;
+	min-width: 500px;
+}
+
 #grid {
 	display: flex;
 	flex-wrap: wrap;
