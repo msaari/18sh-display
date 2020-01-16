@@ -12,6 +12,8 @@ Clone the project and install the dependencies:
 	cd 18sh-display
 	npm install
 
+## Running the server online
+
 Easiest solution to get a server live is to use a service like [Heroku](https://www.heroku.com/) – the free dynos Heroku provides are more than sufficient for this, and are completely free to use. Once you have Heroku installed and the CLI tools set up, getting a server running is as simple as
 
 	heroku create
@@ -22,6 +24,20 @@ This should get you a running server, with a name like `https://peaceful-sands-9
 	export DISPLAY18SH=https://peaceful-sands-90210.herokuapp.com/18sh/
 
 In any case, the name of the environmental variable is `DISPLAY18SH` and you need to add `18sh/` to the end of the URL from Heroku (or wherever it is you host the server). This variable needs to be set on the system you use to run 18SH, not on the system that runs the Cash Display.
+
+## Running on localhost
+
+You can also run the server on localhost. If you have a big screen, you can fit both the cash display and the terminal on the same screen. Even better is if you have multiple screens. You can also access the localhost server from another device in the same network.
+
+To start the server, use
+
+	NODE_ENV=production node index.js
+
+It's normal that there's no response at all. Now the server is running on port 3000 on localhost. You can then use
+
+	export DISPLAY18SH=http://localhost:3000/18sh/
+
+to connect 18SH to the server running on the same computer. If you want to connect from another computer in the same network, replace `localhost` with the local IP of the computer (something like `192.168.1.1` or so).
 
 ## A server for loan
 
