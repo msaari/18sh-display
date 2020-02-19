@@ -1,5 +1,6 @@
 const Conf = require("conf")
 const gameFormat = require("../modules/gameFormat")
+const dataFormat = require("../modules/dataFormat")
 const showAll = require("../modules/showAll")
 
 module.exports = ({ router }) => {
@@ -16,9 +17,17 @@ module.exports = ({ router }) => {
 			ctx.body = gameFormat(ctx.params.id, game)
 		} else {
 			ctx.status = 404
-			ctx.body = `<h1>No game found!</h1><p>Nothing found with <em>${
-				ctx.params.id
-			}</em>!</p>`
+			ctx.body = `<h1>No game found!</h1><p>Nothing found with <em>${ctx.params.id}</em>!</p>`
+		}
+	})
+
+	router.get("/data/:id", async (ctx, next) => {
+		const conf = new Conf("18sh-display")
+		const game = conf.get(ctx.params.id)
+		if (game !== undefined) {
+			ctx.body = game
+		} else {
+			ctx.status = 404
 		}
 	})
 
