@@ -91,6 +91,130 @@ body {
 	background-color: black;
 }
 
+/* 1825 Unit 2 */
+
+.GNR {
+	color: white;
+	background-image: linear-gradient(
+		0deg,
+		#D09050 5%,
+		#208020 5%,
+		#208020 10%,
+		#80B020 10%,
+		#80B020 90%,
+		#208020 90%,
+		#208020 95%,
+		#D09050 95%
+	);
+}
+
+.GCR {
+	color: white;
+	background-image: linear-gradient(
+		0deg,
+		#109030 5%,
+		#A04070 5%,
+		#A04070 10%,
+		#109030 10%,
+		#109030 90%,
+		#A04070 90%,
+		#A04070 95%,
+		#109030 95%
+	);
+}
+
+.LYR {
+	color: #D0D0D0;
+	background-image: linear-gradient(
+		0deg,
+		#202010 5%,
+		#C07060 5%,
+		#C07060 10%,
+		#202010 10%,
+		#202010 90%,
+		#C07060 90%,
+		#C07060 95%,
+		#202010 95%
+	);
+}
+
+.NER {
+	color: black;
+	background-image: linear-gradient(
+		0deg,
+		#4A8050 5%,
+		#FFFFFF 5%,
+		#FFFFFF 10%,
+		#50A050 10%,
+		#50A050 90%,
+		#FFFFFF 90%,
+		#FFFFFF 95%,
+		#4A8050 95%
+	);
+}
+
+.MR {
+	color: white;
+	background-image: linear-gradient(
+		0deg,
+		#3A3A30 5%,
+		#FFF050 5%,
+		#FFF050 10%,
+		#853555 10%,
+		#853555 90%,
+		#FFF050 90%,
+		#FFF050 95%,
+		#3A3A30 95%
+	);
+}
+
+.LNWR {
+	color: #A05560;
+	background-image: linear-gradient(
+		0deg,
+		#A05560 5%,
+		#F0F0F0 5%,
+		#F0F0F0 10%,
+		#303030 10%,
+		#303030 90%,
+		#F0F0F0 90%,
+		#F0F0F0 95%,
+		#A05560 95%
+	);
+}
+
+.NSR {
+	color: black;
+	background-image: linear-gradient(
+		0deg,
+		#404030 5%,
+		#F0D050 5%,
+		#F0D050 10%,
+		#903050 10%,
+		#903050 90%,
+		#F0D050 90%,
+		#F0D050 95%,
+		#404030 95%
+	);
+}
+
+.FR {
+	color: white;
+	background-image: linear-gradient(
+		0deg,
+		#303030 5%,
+		#F0F0F0 5%,
+		#F0F0F0 10%,
+		#854A4A 10%,
+		#854A4A 90%,
+		#F0F0F0 90%,
+		#F0F0F0 95%,
+		#303030 95%
+	);
+}
+
+
+
 /* 1825 Unit 3 */
 
 .CR {
