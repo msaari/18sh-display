@@ -55,7 +55,7 @@ module.exports = (title, data) => {
 							for (let item of jsonItems) {
 								const element = document.getElementById(item)
 								if ( element != null ) {
-									element.childNodes[1].innerHTML = jsonData.cash[item]
+									element.childNodes[1].innerHTML = jsonData.currency + jsonData.cash[item]
 								} else {
 									const newElement = createItem(item)
 									const parent = document.getElementById("grid")

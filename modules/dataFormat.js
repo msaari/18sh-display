@@ -6,10 +6,8 @@ module.exports = (title, data) => {
 	const round = data.round
 	const currencySymbol = data.currency
 
-	if (currencySymbol !== "$") css = css.replace(/\$/, currencySymbol)
-
 	const cashHoldings = Object.keys(data.cash).map(key => {
-		const cash = data.cash[key]
+		const cash = data.currency + data.cash[key]
 		const className = key.replace(/[^\w\d]/g, "_")
 		return `<div class="item" id="${className}"><div class="name ${className}">${key}</div><div class="cash">${cash}</div></div>`
 	})

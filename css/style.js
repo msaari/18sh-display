@@ -34,10 +34,6 @@ body {
 	text-align: center;
 }
 
-.cash::before {
-	content: "$";
-}
-
 #topbar {
 	background-color: rgb(30, 62, 46);
 	color: #fff;
