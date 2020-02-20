@@ -53,7 +53,11 @@ When you have the environmental variable set up and the server running, there's 
 
 	https://peaceful-sands-90210.herokuapp.com/18sh/<gamename>
 
-where `<gamename>` is the name of your game in 18SH. This should bring up the cash display. The display will refresh automatically every 5 seconds.
+where `<gamename>` is the name of your game in 18SH. This should bring up the cash display. The display will refresh automatically every couple of seconds.
+
+### Adjusting the order of companies
+
+If you want to adjust the order of companies and players on the display, you can move a company to the top of the list by clicking it. This can be helpful for example when each player is using their own device to watch the display. Each player can then have their own display show their own cash and their own companies first.
 
 ## Company colors
 
@@ -80,6 +84,6 @@ the unreleased features already available from the repo, but not in releases.
 
 ## License
 
-Copyright 2019 [Mikko Saari](https://github.com/msaari/) mikko@mikkosaari.fi
+Copyright 2020 [Mikko Saari](https://github.com/msaari/) mikko@mikkosaari.fi
 
 See [license information](LICENSE).
