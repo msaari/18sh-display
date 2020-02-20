@@ -32,6 +32,7 @@ module.exports = (title, data) => {
 					let cash = item.appendChild(document.createElement('div'))
 					const className = key.replace(/[^\\w\\d]/g, "_")
 					item.id = className
+					item.className = 'item'
 					name.className = 'name ' + className
 					name.innerHTML = key
 					cash.className = 'cash'
