@@ -50,7 +50,8 @@ module.exports = (title, data) => {
 						if (this.readyState === 4 && this.status === 200) {
 							const jsonData = JSON.parse(this.responseText)
 							document.getElementById("round").innerHTML = jsonData.round
-							for (let item of Object.keys(jsonData.cash)) {
+							const jsonItems = Object.keys(jsonData.cash)
+							for (let item of jsonItems) {
 								const element = document.getElementById(item)
 								if ( element != null ) {
 									element.childNodes[1].innerHTML = jsonData.cash[item]
@@ -59,7 +60,13 @@ module.exports = (title, data) => {
 									const parent = document.getElementById("grid")
 									parent.appendChild(newElement)
 								}
-
+							}
+							const gridNodes = document.getElementById("grid").childNodes
+							for (let item of gridNodes) {
+								const itemKey = item.childNodes[0].innerHTML
+								if (! jsonItems.includes(itemKey)) {
+									document.getElementById(itemKey).remove()
+								}
 							}
 							const today = new Date()
 							const time =
