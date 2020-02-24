@@ -21,8 +21,7 @@ module.exports = (title, data) => {
 				let orderCounter = -1
 
 				function setOrder(target) {
-					target.path[1].style.order = orderCounter
-					console.log(orderCounter)
+					target.target.parentNode.style.order = orderCounter
 					orderCounter--
 				}
 
