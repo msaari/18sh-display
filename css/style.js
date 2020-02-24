@@ -34,6 +34,18 @@ body {
 	text-align: center;
 }
 
+@media screen and (max-width: 1024px) {
+	.item {
+		margin: 10px;
+	}
+	.name {
+		font-size: 40px;
+	}
+	.cash {
+		font-size: 50px;
+	}
+}
+
 #topbar {
 	background-color: rgb(30, 62, 46);
 	color: #fff;
