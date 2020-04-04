@@ -424,5 +424,42 @@ body {
 
 }
 
+/* 1860 */
+
+.IWNJ {
+	color: white;
+	background-color: black;
+}
+
+.CN {
+	color: black;
+	background-color: #D4F2FF;
+}
+
+.FYN {
+	color: white;
+	background-color: #009900;
+}
+
+.SC {
+	color: white;
+	background-color: #1A237E;
+}
+
+.BHIR {
+	color: white;
+	background-color: #8B4E96;
+}
+
+.IOW {
+	color: white;
+	background-color: #D10000;
+}
+
+.VYSC {
+	color: black;
+	background-color: #BFED74;
+}
+
 	`.trim()
 }
