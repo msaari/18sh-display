@@ -461,5 +461,10 @@ body {
 	background-color: #BFED74;
 }
 
+.NGSTL {
+	color: black;
+	background-color: #FFFF20;
+}
+
 	`.trim()
 }
