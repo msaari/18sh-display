@@ -24,7 +24,7 @@
   "author": "Mikko Saari",
   "license": "MIT",
   "dependencies": {
-    "conf": "^6.2.1",
+    "conf": "^11.0.1",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^8.0"
